@@ -179,6 +179,11 @@ app.get('/graph', (req, res) => {
             },
            datalabels: {
                 color: 'black', 
+                formatter: (value, ctx) => {
+                    let total = ctx.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                    let percentage = (value / total * 100).toFixed(2) + '%';
+                    return percentage;
+                },
             }
           }
         }
