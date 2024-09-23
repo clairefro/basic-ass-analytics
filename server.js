@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 const db = new Datastore({ filename: path.join(__dirname, '.an.db'), autoload: true });
 
 // Middleware
-app.use(express.json()); // Parses incoming JSON requests
+app.use(express.json()); 
 app.use(cors({ origin: process.env.ORIGIN })); 
 
 app.get('/', (req, res) => {
@@ -83,7 +83,7 @@ app.get('/graph', (req, res) => {
     .pie-chart {
       max-width: 200px;
       width: 100%;
-      height: auto;
+      max-height: 400px;
     }
     .pies {
       display: flex;
