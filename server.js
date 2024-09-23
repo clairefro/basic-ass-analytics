@@ -116,6 +116,8 @@ app.get('/graph', (req, res) => {
     
     let charts = []
     
+    const totalVisitsEl = document.getElementById('totalVisits');
+    
     function getCounts(data, key) {
       return data.reduce((acc, entry) => {
         const value = entry[key];
@@ -208,10 +210,11 @@ app.get('/graph', (req, res) => {
       if(charts.length) {
         destroyAllCharts()
 
-        const filteredData = filterDataByDateRange(d, startDateInput, endDateInput);
+        filteredData = filterDataByDateRange(d, startDateInput, endDateInput);
       
       }
-      
+      console.log(filteredData.length)
+      totalVisitsEl.innerText = \`Total Visits: \${filteredData.length}\`;
 
       
       // Update counts
@@ -309,9 +312,7 @@ app.get('/graph', (req, res) => {
   </script>
 </body>
 </html>
-
-
-    `
+`
 
     res.send(template);
   });
