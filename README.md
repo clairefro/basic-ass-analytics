@@ -44,7 +44,7 @@ export default useAn;
 ## Impl
 Place at app root if only want hits on app render 
 
-If page-wise analytics need, modify the server to collect page path, move impl to page layout 
+If page-wise analytics needed, modify the server to collect page path, move impl to page layout 
 
 ```jsx
 function App() {
