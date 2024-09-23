@@ -1,3 +1,8 @@
+
+# Basic Ass Analytics
+
+![image](https://github.com/user-attachments/assets/0a75810d-c671-49bf-87cb-3e4697105c7c)
+
 # Usage - Client snippet (React)
 
 ## Hook 
