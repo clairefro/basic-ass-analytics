@@ -324,21 +324,3 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-
-
-function tsToDay(ts) {
-  return ts.split('T')[0]
-}
-
-function getDateRange(startDate, endDate) {
-    const dateArray = [];
-    let currentDate = new Date(startDate);
-    const stopDate = new Date(endDate);
-
-    while (currentDate <= stopDate) {
-        dateArray.push(tsToDay(currentDate.toISOString())); 
-        currentDate.setDate(currentDate.getDate() + 1);
-    }
-
-    return dateArray;
-}
